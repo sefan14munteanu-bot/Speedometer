@@ -9,6 +9,7 @@
 
     <title>Speedometer</title>
 
+    <!-- CSS -->
     <link rel="stylesheet" href="speedometer.css">
 </head>
 
@@ -20,11 +21,8 @@
 
         <!-- TITLU -->
         <div class="top">
-
             <h1>⚡ SPEEDOMETER</h1>
-
             <p>Viteza ta în timp real</p>
-
         </div>
 
 
@@ -42,14 +40,14 @@
         </div>
 
 
-        <!-- UNITĂȚI -->
+        <!-- BUTOANE UNITĂȚI -->
         <div class="units">
 
-            <button id="kmhButton" class="active">
+            <button id="kmhButton" type="button">
                 KM/H
             </button>
 
-            <button id="mphButton">
+            <button id="mphButton" type="button">
                 MPH
             </button>
 
@@ -69,8 +67,13 @@
                 GPS-ul este dezactivat
             </p>
 
-            <button id="startButton" class="start-button">
+            <button
+                id="startButton"
+                class="start-button"
+                type="button">
+
                 📍 ACTIVEAZĂ GPS
+
             </button>
 
         </div>
@@ -96,6 +99,7 @@
     </main>
 
 
+    <!-- JAVASCRIPT -->
     <script src="speedometer.js"></script>
 
 </body>
