@@ -1,0 +1,291 @@
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    background: #050816;
+    color: white;
+
+    overflow: hidden;
+}
+
+/* Fundal */
+
+.background {
+    position: fixed;
+    width: 700px;
+    height: 700px;
+
+    background: radial-gradient(
+        circle,
+        rgba(0, 180, 255, 0.18),
+        transparent 65%
+    );
+
+    filter: blur(30px);
+}
+
+/* Container */
+
+.speedometer {
+    position: relative;
+    z-index: 1;
+
+    width: 430px;
+    max-width: 90%;
+
+    padding: 35px;
+
+    text-align: center;
+
+    background: rgba(12, 18, 38, 0.85);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.5),
+        inset 0 0 40px rgba(0, 170, 255, 0.03);
+
+    backdrop-filter: blur(20px);
+}
+
+/* Titlu */
+
+.top h1 {
+    font-size: 28px;
+    letter-spacing: 3px;
+
+    margin-bottom: 8px;
+}
+
+.top p {
+    color: #8d9bb8;
+    font-size: 14px;
+}
+
+/* Cercul vitezei */
+
+.speed-circle {
+    width: 280px;
+    height: 280px;
+
+    margin: 35px auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background:
+        conic-gradient(
+            #00c6ff 0deg,
+            #0072ff 120deg,
+            #7c3cff 240deg,
+            #00c6ff 360deg
+        );
+
+    box-shadow:
+        0 0 35px rgba(0, 170, 255, 0.25);
+
+    animation: glow 3s infinite alternate;
+}
+
+.circle-inner {
+    width: 245px;
+    height: 245px;
+
+    border-radius: 50%;
+
+    background: #080d1d;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#speed {
+    font-size: 75px;
+    font-weight: bold;
+
+    line-height: 1;
+
+    text-shadow:
+        0 0 20px rgba(0, 200, 255, 0.6);
+
+    transition: 0.2s;
+}
+
+#unit {
+    margin-top: 10px;
+
+    font-size: 18px;
+    letter-spacing: 3px;
+
+    color: #00c6ff;
+}
+
+/* Butoane unități */
+
+.units {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    margin-bottom: 25px;
+}
+
+.units button {
+    width: 100px;
+
+    padding: 11px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #151d35;
+    color: #8d9bb8;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.units button:hover {
+    transform: translateY(-2px);
+}
+
+.units button.active {
+    background: #0072ff;
+    color: white;
+
+    box-shadow: 0 0 15px rgba(0, 114, 255, 0.5);
+}
+
+/* Status */
+
+.status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 20px;
+
+    color: #8d9bb8;
+
+    font-size: 14px;
+}
+
+#statusDot {
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: #ffb000;
+
+    box-shadow: 0 0 10px #ffb000;
+}
+
+/* Buton GPS */
+
+.start-button {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+    border-radius: 14px;
+
+    background: linear-gradient(
+        135deg,
+        #00c6ff,
+        #0072ff
+    );
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.start-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 114, 255, 0.35);
+}
+
+.start-button:active {
+    transform: scale(0.98);
+}
+
+/* Text */
+
+.info {
+    margin-top: 18px;
+
+    font-size: 12px;
+
+    color: #687694;
+}
+
+/* Animație */
+
+@keyframes glow {
+    from {
+        box-shadow:
+            0 0 25px rgba(0, 170, 255, 0.2);
+    }
+
+    to {
+        box-shadow:
+            0 0 45px rgba(0, 170, 255, 0.45);
+    }
+}
+
+/* Telefon */
+
+@media (max-width: 500px) {
+
+    .speedometer {
+        padding: 25px;
+    }
+
+    .speed-circle {
+        width: 230px;
+        height: 230px;
+    }
+
+    .circle-inner {
+        width: 200px;
+        height: 200px;
+    }
+
+    #speed {
+        font-size: 60px;
+    }
+}
+```

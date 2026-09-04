@@ -1,0 +1,104 @@
+```html
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Speedometer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background"></div>
+
+    <main class="speedometer">
+
+        <!-- TITLU -->
+        <div class="top">
+
+            <h1>⚡ SPEEDOMETER</h1>
+
+            <p>Viteza ta în timp real</p>
+
+        </div>
+
+
+        <!-- VITEZOMETRU -->
+        <div class="speed-circle">
+
+            <div class="circle-inner">
+
+                <span id="speed">0</span>
+
+                <span id="unit">KM/H</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- UNITĂȚI -->
+        <div class="units">
+
+            <button id="kmhButton" class="active">
+                KM/H
+            </button>
+
+            <button id="mphButton">
+                MPH
+            </button>
+
+        </div>
+
+
+        <!-- GPS -->
+        <div class="gps-section">
+
+            <div class="gps-icon">
+                📍
+            </div>
+
+            <h2>GPS</h2>
+
+            <p id="gpsMessage">
+                GPS-ul este dezactivat
+            </p>
+
+            <button id="startButton" class="start-button">
+                📍 ACTIVEAZĂ GPS
+            </button>
+
+        </div>
+
+
+        <!-- STATUS -->
+        <div class="status">
+
+            <span id="statusDot"></span>
+
+            <span id="statusText">
+                Așteptare GPS...
+            </span>
+
+        </div>
+
+
+        <!-- INFORMAȚIE -->
+        <p class="info">
+            Activează GPS-ul pentru a vedea viteza.
+        </p>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+```
